@@ -1,14 +1,66 @@
-/* video background css - start*/
-header {
+/*video background style, overlay, and overlay contents - start*/
+.video-background-holder { /*fixed container size*/
     position: relative;
     background-color: black;
-    height: 75vh;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /*video can overflow no matter what the width becomes*/
+}
+
+.video-background-holder video { /*video placeholder/position*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+}
+
+.video-background-content { /*Text contents layout*/
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px black;
+}
+
+.video-background-overlay { /*black-opacity background overlay*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+/*video background style, overlay, and overlay contents - end*/
+
+/*image background style, overlay, and overlay contents - start*/
+.photo-background-holder { /*the only difference here, is the size and the black overlay opacity*/
+    position: relative;
+    background-color: black;
+    height: calc(60vh - 72px); 
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
-  }
-  
-  header video {
+}
+.photo-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.70;
+    z-index: 1;
+}
+
+.photo-background-holder img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,30 +73,10 @@ header {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-  }
-  
-  header .container {
+}
+.photo-background-content { /*Text contents layout*/
     position: relative;
     z-index: 2;
-  }
-  
-  header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 1;
-  }
-  
-  @media (pointer: coarse) and (hover: none) {
-    header {
-      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-    }
-    header video {
-      display: none;
-    }
-  }
-/* video background css - end*/
+    text-shadow: 2px 2px black;
+}
+/*image background style, overlay, and overlay contents - end*/

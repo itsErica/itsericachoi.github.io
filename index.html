@@ -11,21 +11,28 @@
     <body>
         
         <!-- welcome -->
-        <header>
-        <div class="overlay"></div>
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-             <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
-        </video>
-        <div class="container h-100">
-            <div class="d-flex h-100 text-center align-items-center">
-                <div class="w-100 text-white">
-                    <h1 class="display-3">Welcome to ERICACHOI.ME</h1>
-                    <p class="lead mb-0">Erica Choi's portfolio.</p>
+        <div class="video-background-holder">
+            @*video and block position*@
+            <div class="video-background-overlay"> @*the semi-clear black overlay to read over white text*@ </div>
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="~/lib/assets/backgrounds/schoolvideo.mp4" type="video/mp4">
+                @*this includes the video to play in loop*@
+            </video>
+            <div class="video-background-content container h-100">
+                @*this holds the text/content in the centre of the container/block*@
+                <div class="d-flex h-100 text-center align-items-center">
+                    @*keeps text within a fixed area and centered*@
+                    <div class="w-100 text-white">
+                        @* keeps all text white *@
+                        <h1 class="display-4" style="text-transform: uppercase">welcome to</h1>  @*H1 and "display-4" H1 size-type styled and force all uppercased text*@
+                        <img class="img-fluid" src="~/lib/assets/it4me-white-logo.png" />
+                        <p class="lead mb-0">Erica Choi's Porfolio Website.</p>
+                        @*"lead" makes paragraphs style stand out,  "mb" spaces between paragraphs to none=0*@
+                    </div>
                 </div>
             </div>
         </div>
-        </header>
-        
+
         <!-- navigation bar; will stay top when scrolled -->
         <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top">
             <ul class="navbar-nav">
@@ -48,9 +55,22 @@
           </nav> 
         <!-- navigation bar end -->
 
-        <div class="container text-center">
-            UNDER CONSTRUCTION
-        </div> 
+       
+        <div class"container" style="margin-top:5px;">
+        
+                <div class="photo-background-holder">
+                    <div class="photo-background-overlay"></div>
+                    <img src="" />
+                    <div class="photo-background-content container-fluid h-100">
+                        <div class="d-flex h-100 text-center align-items-center">
+                            <div class="w-100 text-white">
+                                UNDER CONSTRUCTION    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
 
         <div class="container-fluid bg-light text-center fixed-bottom">
             Copyrights &copy; MAY 2020 <a href="https://www.linkedin.com/in/ericatchoi/">Erica Choi</a>, ericachoi.me
