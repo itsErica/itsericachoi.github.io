@@ -105,3 +105,13 @@ body {
     text-shadow: 2px 2px black;
 }
 /*image background style, overlay, and overlay contents - end*/
+
+
+
+/* fonts*/
+
+.h2 {
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px black;
+    
+}
