@@ -32,10 +32,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 50%;
     width: 100%;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.7;
     z-index: 1;
 }
 /*video background style, overlay, and overlay contents - end*/
