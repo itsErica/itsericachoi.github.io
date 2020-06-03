@@ -56,6 +56,18 @@
     height: 100%;
   }
 
+.slide-overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 
 /*image background style, overlay, and overlay contents - start*/
 .photo-background-holder { /*the only difference here, is the size and the black overlay opacity*/
